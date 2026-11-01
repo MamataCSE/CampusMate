@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusMate - Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>🎓 CampusMate</h2>
+        <p>Your Smart College Companion</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('timetable')">Timetable</button>
+        <button onclick="showSection('faculty')">Faculty</button>
+        <button onclick="showSection('notices')">Notices</button>
+        <button onclick="showSection('events')">Events</button>
+        <button onclick="showSection('help')">Help Desk</button>
+    </nav>
+
+    <main>
+
+        <section id="dashboard" class="section">
+            <h1>Welcome to CampusMate!</h1>
+            <p>Your college information, all in one place.</p>
+
+            <div class="cards">
+                <div class="card">📅<h3>Timetable</h3>
+                    <p>Check your class schedule.</p>
+                </div>
+                <div class="card">👩‍🏫<h3>Faculty</h3>
+                    <p>Find faculty information.</p>
+                </div>
+                <div class="card">📢<h3>Notices</h3>
+                    <p>Read college announcements.</p>
+                </div>
+                <div class="card">🎉<h3>Events</h3>
+                    <p>Explore college events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timetable" class="section hidden">
+            <h2>Class Timetable</h2>
+            <table>
+                <tr><th>Day</th><th>Subject</th><th>Time</th></tr>
+                <tr><td>Monday</td><td>DBMS</td><td>9:00 AM</td></tr>
+                <tr><td>Tuesday</td><td>Operating Systems</td><td>10:00 AM</td></tr>
+                <tr><td>Wednesday</td><td>Computer Networks</td><td>11:00 AM</td></tr>
+                <tr><td>Thursday</td><td>Python</td><td>9:00 AM</td></tr>
+                <tr><td>Friday</td><td>Software Engineering</td><td>10:00 AM</td></tr>
+            </table>
+        </section>
+
+        <section id="faculty" class="section hidden">
+            <h2>Faculty Directory</h2>
+            <div class="card">
+                <h3>Computer Science Department</h3>
+                <p>Faculty: Demo Faculty 1</p>
+                <p>Email: faculty@example.com</p>
+            </div>
+        </section>
+
+        <section id="notices" class="section hidden">
+            <h2>College Notices</h2>
+            <div class="card">
+                <h3>📢 Important Announcement</h3>
+                <p>Students are requested to check their college timetable regularly.</p>
+            </div>
+        </section>
+
+        <section id="events" class="section hidden">
+            <h2>Upcoming Events</h2>
+            <div class="card">
+                <h3>🎉 College Fest</h3>
+                <p>A demo college event. Date: To be announced.</p>
+            </div>
+        </section>
+
+        <section id="help" class="section hidden">
+            <h2>Student Help Desk</h2>
+            <form onsubmit="submitHelp(event)">
+                <input type="text" id="studentName" placeholder="Your name" required>
+                <textarea id="message" placeholder="Write your question" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="response"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusMate | Student Portal Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
